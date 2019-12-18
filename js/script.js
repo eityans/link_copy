@@ -2,10 +2,12 @@
 var title = document.title;
 var url = location.href+'';
 var text = "["+title+"]("+url+")";
-var listener = function(e){
-  e.clipboardData.setData("text/plain" , text);
-  e.preventDefault();
-  document.removeEventListener("copy", listener);
-}
-document.addEventListener("copy" , listener);
+var textBox = document.createElement("textarea");
+textBox.setAttribute("id", "target");
+textBox.setAttribute("type", "hidden");
+textBox.textContent = text.toString();;
+document.body.appendChild(textBox);
+
+textBox.select();
 document.execCommand('copy');
+document.body.removeChild(textBox);
