@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
-    "name": "Copy link",
-    "description": "copy link and format [xxx](url)",
+    "name": "Copy [Title] (URL)",
+    "description": "Copy the link in the form of [Title] (URL)",
     "icons": {
       "16": "icon/icon16.png",
       "48": "icon/icon48.png",
