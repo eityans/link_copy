@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "Copy link",
+    "description": "copy link and format [xxx](url)",
+    "icons": {
+      "16": "icon/icon16.png",
+      "48": "icon/icon48.png",
+      "128": "icon/icon128.png"
+    },
+    "version": "0.1",
+    "browser_action": {
+        "default_title": "Copy link"
+    },
+    "content_scripts": [{
+        "matches": [ "http://*/*", "https://*/*" ],
+        "js": ["js/jquery.js", "js/script.js"]
+      }],
+    "background": {
+      "scripts": ["js/background.js"]
+    },
+    "permissions": ["activeTab"]
+  }
